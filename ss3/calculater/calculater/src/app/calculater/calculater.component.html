@@ -1,0 +1,20 @@
+<p>calculater works!</p>
+<label>Number 1: </label>
+<input type="text" (change)="setValueNumber1($event.target.value)">
+<br>
+<label>Operator: &nbsp; &nbsp;</label>
+<select (change)="setOperator($event.target.value)" style="width: 100px; height: 20px">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<br>
+<label>Number 2: </label>
+<input type="text" (change)="setValueNumber2($event.target.value)">
+<input type="button" value="Cal" (click)="cal()">
+<h3>Result: {{result}}</h3>
+
+<!--[value]="number1"-->
+<!--(change)="setValueNumber1($event.target.value)"-->
+<!--[(ngModel)]="number1"-->
