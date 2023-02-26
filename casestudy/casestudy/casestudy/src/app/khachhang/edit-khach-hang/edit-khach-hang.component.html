@@ -1,0 +1,65 @@
+<div style="text-align: center">
+  <h2>Cập nhật khách hàng</h2>
+</div>
+
+<div class="row">
+
+  <div class="col-lg-3">
+    <div id="list-example" class="list-group">
+
+    </div>
+  </div>
+
+  <div class="col-lg-9">
+
+    <form [formGroup]="khachHangForm" (ngSubmit)="updateKhachHang(id)" class="row g-3">
+      <div class="col-12">
+        <label  class="form-label">Id</label>
+        <input type="text" class="form-control" formControlName="id">
+        <!--        <span th:if="${#fields.hasErrors('khachHang')}" th:errors="*{khachHang}" style="color: red"></span>-->
+      </div>
+      <div class="col-12">
+        <label  class="form-label">Loại khách hàng</label>
+        <select formControlName="loaiKH" class="form-control">
+          <option value="">Chọn loại khách hàng</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label  class="form-label">Tên khách hàng</label>
+        <input type="text" class="form-control" formControlName="hoTen" >
+      </div>
+      <div class="col-12">
+        <label  class="form-label">Ngày sinh</label>
+        <input type="date" class="form-control" formControlName="ngaySinh" >
+      </div>
+      <div class="col-12">
+        <label  class="form-label">CMND</label>
+        <input type="text" class="form-control" formControlName="cmnd" >
+      </div>
+      <div class="col-12">
+        <label  class="form-label">Số điện thoại</label>
+        <input type="text" class="form-control" formControlName="sdt" >
+      </div>
+      <div class="col-12">
+        <label  class="form-label">Email</label>
+        <input type="text" class="form-control" formControlName="email" >
+      </div>
+      <div class="col-12">
+        <label  class="form-label">Địa chỉ</label>
+        <input type="text" class="form-control" formControlName="diaChi" >
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Cập nhật khách hàng</button>
+      </div>
+    </form>
+
+  </div>
+
+
+
+
+
+</div>

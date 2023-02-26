@@ -1,0 +1,64 @@
+{
+  "khachhangs": [
+    {
+      "id": 1,
+      "loaiKH": 1,
+      "hoTen": "Nghĩa",
+      "ngaySinh": "02/08/2001",
+      "cmnd": "0123456789",
+      "sdt": "0123456789",
+      "email": "nghia@gmail.com",
+      "diaChi": "Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "loaiKH": 1,
+      "hoTen": "Khoa",
+      "ngaySinh": "02/08/2001",
+      "cmnd": "0123456789",
+      "sdt": "0123456789",
+      "email": "nghia@gmail.com",
+      "diaChi": "Đà Nẵng"
+    },
+    {
+      "id": "3",
+      "loaiKH": "1",
+      "hoTen": "1",
+      "ngaySinh": "2023-02-25",
+      "cmnd": "1",
+      "sdt": "1",
+      "email": "1",
+      "diaChi": "2"
+    },
+    {
+      "id": "4",
+      "loaiKH": "1",
+      "hoTen": "2",
+      "ngaySinh": "",
+      "cmnd": "2",
+      "sdt": "2",
+      "email": "2",
+      "diaChi": "2"
+    },
+    {
+      "id": "5",
+      "loaiKH": "1",
+      "hoTen": "123",
+      "ngaySinh": "2023-02-25",
+      "cmnd": "1",
+      "sdt": "0123456789",
+      "email": "nghia@gmail.com",
+      "diaChi": "123"
+    },
+    {
+      "id": "9dXcVqE",
+      "loaiKH": "",
+      "hoTen": "",
+      "ngaySinh": "",
+      "cmnd": "",
+      "sdt": "",
+      "email": "",
+      "diaChi": ""
+    }
+  ]
+}

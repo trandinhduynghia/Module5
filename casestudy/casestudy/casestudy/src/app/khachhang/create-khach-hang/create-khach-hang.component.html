@@ -1,0 +1,96 @@
+<div style="text-align: center">
+  <h2>Thêm mới khách hàng</h2>
+</div>
+
+<div class="row">
+
+  <div class="col-lg-3">
+    <div id="list-example" class="list-group">
+
+    </div>
+  </div>
+
+  <div class="col-lg-9">
+
+    <form [formGroup]="khachHangForm" (ngSubmit)="getKhachHang()" class="row g-3">
+      <div class="col-12">
+        <label class="form-label">Id</label>
+        <input type="text" class="form-control" formControlName="id">
+        <span style="color: red" *ngIf="khachHangForm.get('id').hasError('required') && khachHangForm.get('id').touched">
+          Id không được để trống
+        </span>
+      </div>
+      <div class="col-12">
+        <label class="form-label">Loại khách hàng</label>
+        <select formControlName="loaiKH" class="form-control">
+          <option value="">Chọn loại khách hàng</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+      <span style="color: red" *ngIf="khachHangForm.get('loaiKH').hasError('required') && khachHangForm.get('loaiKH').touched">
+          Loại khách hàng không được để trống
+        </span>
+      <div class="col-12">
+        <label class="form-label">Tên khách hàng</label>
+        <input type="text" class="form-control" formControlName="hoTen">
+      </div>
+      <span style="color: red" *ngIf="khachHangForm.get('hoTen').hasError('required') && khachHangForm.get('hoTen').touched">
+          Họ tên không được để trống
+        </span>
+      <span style="color: red" *ngIf="khachHangForm.get('hoTen').hasError('minlength') && khachHangForm.get('hoTen').touched">
+          Họ tên phải dài hơn 3 kí tự
+        </span>
+      <div class="col-12">
+        <label class="form-label">Ngày sinh</label>
+        <input type="date" class="form-control" formControlName="ngaySinh">
+      </div>
+      <div class="col-12">
+        <label class="form-label">CMND</label>
+        <input type="text" class="form-control" formControlName="cmnd">
+      </div>
+      <span style="color: red" *ngIf="khachHangForm.get('cmnd').hasError('required') && khachHangForm.get('cmnd').touched">
+          CMND không được để trống
+        </span>
+      <div class="col-12">
+        <label class="form-label">Số điện thoại</label>
+        <input type="text" class="form-control" formControlName="sdt">
+      </div>
+      <span style="color: red" *ngIf="khachHangForm.get('sdt').hasError('required') && khachHangForm.get('sdt').touched">
+          Số điện thoại không được để trống
+        </span>
+      <span style="color: red" *ngIf="khachHangForm.get('sdt').hasError('pattern') && khachHangForm.get('sdt').touched">
+          Số điện thoại không hợp lệ
+        </span>
+      <div class="col-12">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" formControlName="email">
+      </div>
+      <span style="color: red" *ngIf="khachHangForm.get('email').hasError('required') && khachHangForm.get('email').touched">
+          Email không được để trống
+        </span>
+      <span style="color: red" *ngIf="khachHangForm.get('email').hasError('email') && khachHangForm.get('email').touched">
+          Email không hợp lệ
+        </span>
+      <div class="col-12">
+        <label class="form-label">Địa chỉ</label>
+        <input type="text" class="form-control" formControlName="diaChi">
+      </div>
+      <span style="color: red" *ngIf="khachHangForm.get('diaChi').hasError('required') && khachHangForm.get('diaChi').touched">
+          Địa chỉ không được để trống
+        </span>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Thêm khách hàng</button>
+      </div>
+    </form>
+
+
+
+  </div>
+
+
+</div>
+
+
+

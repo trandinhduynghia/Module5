@@ -1,0 +1,99 @@
+<div style="text-align: center">
+  <h2>Danh sách khách hàng</h2>
+</div>
+
+<div >
+
+  <div class="row">
+
+    <div class="col-lg-3">
+      <div id="list-example" class="list-group">
+
+      </div>
+
+    </div>
+
+
+    <div class="col-lg-9">
+      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">Mã khách hàng</th>
+            <th scope="col">Loại khách hàng</th>
+            <th scope="col">Tên khách hàng</th>
+            <th scope="col">Ngày sinh</th>
+            <th scope="col">CMND</th>
+            <th scope="col">Số điện thoại</th>
+            <th scope="col">Email</th>
+            <th scope="col">Địa chỉ</th>
+            <th></th>
+            <th></th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let khachHang of khachHangs">
+              <td>{{khachHang.id}}</td>
+              <td>{{khachHang.loaiKH}}</td>
+              <td>{{khachHang.hoTen}}</td>
+              <td>{{khachHang.ngaySinh}}</td>
+              <td>{{khachHang.cmnd}}</td>
+              <td>{{khachHang.sdt}}</td>
+              <td>{{khachHang.email}}</td>
+              <td>{{khachHang.diaChi}}</td>
+              <td><a class="btn btn-primary" role="button" [routerLink]="['edit', khachHang.id]">Sửa</a></td>
+              <td>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" (click)="delete(khachHang)">
+                  Xóa
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <!--                    <nav aria-label="Page navigation example">-->
+        <!--                        <ul class="pagination">-->
+        <!--                            <li class="page-item"><a class="page-link" th:href="@{'/list-customer'(page=${list.number - 1}, name=${name},address=${address},customerType=${customerType})}" th:if="${list.hasPrevious()}">Previous</a></li>-->
+        <!--                            <li class="page-item"><a class="page-link" th:href="@{'/list-customer'(page=${list.number}, name=${name},address=${address},customerType=${customerType})}" th:text="${list.number + 1}"></a></li>-->
+        <!--                            <li class="page-item"><a class="page-link" th:href="@{'/list-customer'(page=${list.number + 1},name=${name},address=${address},customerType=${customerType})}" th:if="${list.hasNext()}" >Next</a></li>-->
+        <!--                        </ul>-->
+        <!--                    </nav>-->
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <!--Modal-->
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bạn muốn xóa khách hàng {{khachHang.hoTen}}?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+          <button type="button" class="btn btn-primary" (click)="deleteKhachHang(khachHang.id)">Xóa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
